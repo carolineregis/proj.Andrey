@@ -23,8 +23,22 @@
           <li><a href="#jogos">Jogos</a></li>
           <li><a href="#quemsomos">Sobre Nós</a></li>
           <li><a href="#contato">Contato</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
+          <div class="content">
+              <div class="search-area">
+                <div class="search-box">
+                  <input type="text" id="search-input" placeholder="Digite o nome do jogo..." oninput="filterGames()">
+                  <button> 
+                    <i class="fas fa-search"> <!-- design da lupa   -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="7" />
+                        <line x1="16.65" y1="16.65" x2="21" y2="21" />
+                      </svg>
+                    </i> 
+                  </button>
+                </div>
+                <div id="search-results" class="hidden"> </div> <!-- area de resultados preenchida pelo JS -->
+              </div>
+          </div>
         </ul>
         <div class="menu" id="menu">&#9776;</div>
     </nav>

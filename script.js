@@ -1,6 +1,7 @@
 /* toggle do menu */
 const menu = document.querySelector('.menu');
 const navLinks = document.querySelector('.nav-links');
+
 menu.addEventListener('click', () => {
   if (!navLinks.classList.contains('active')){
     /* animação de entrada */
@@ -11,6 +12,14 @@ menu.addEventListener('click', () => {
     navLinks.classList.add('deactive');
     navLinks.classList.remove('active');
   }
+});
+const links = document.querySelectorAll('.nav-links a');
+
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.add('deactive');
+    navLinks.classList.remove('active');
+  });
 });
 
 /* efeito carrossel de posters */
@@ -79,7 +88,7 @@ function filterGames() {
     return;
   }
 
-  const filtered = games.filter(g => g.name.toLowerCase().includes(query));
+  const filtered = games.filter(g => g.name.toLowerCase().startsWith(query));
 
   if (filtered.length === 0) {
     searchResults.innerHTML = "<p>Nenhum jogo encontrado.</p>";

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GhostNebula - Início</title>
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer> </script>
+</head>
+  <body>
+    
+  <header>
+    <!-- video -->
+    <video autoplay muted loop playsinline  id="video-bg">
+     <source src="img/movie_max/movie_max.mp4" type="video/mp4">
+    </video>
+      <nav class="navbar">
+        <!-- logo -->
+        <div class="logo-container2"> 
+          <img src="img/st.png" style="width: 15ch; height: auto; left: 0;" alt="Logo Ghost Nebula">
+          <img src="img/Screenshot_1.png" style="width: 10ch; height: auto; margin-bottom: -20px; margin-left: -20px;" alt="Logo Ghost Nebula">
+        </div>
+      
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#jogos">Jogos</a></li>
+          <li><a href="#quemsomos">Sobre </a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          
+          <!-- area de pesquisa -->
+          <div class="content">
+              <div class="search-area">
+                <div class="search-box">
+                  <input type="text" id="search-input" placeholder="Digite o nome do jogo..." oninput="filterGames()">
+                  <button> 
+                    <i class="fas fa-search"> <!-- design da lupa   -->
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="7" />
+                        <line x1="16.65" y1="16.65" x2="21" y2="21" />
+                      </svg>
+                    </i> 
+                  </button>
+                </div>
+                <div id="search-results" class="hidden"> </div> <!-- area de resultados preenchida pelo JS -->
+              </div>
+          </div>
+        </ul>
+        <div class="menu" id="menu">&#9776;</div>
+      </nav>
+      <div class="H1"> <h1> Descubra aqui um universo <br> de possibiliades </h1></div> <!-- espaço pro H1 centralizado -->
+    <div class="bottom-button" > <a href="#quemsomos"> &darr; </a> </div> <!-- botão pra descer até as seções inferiores -->
+  </header>
+
+  <section id= "jogos" class="carousel-section">
+    <img src="img/header.png" class="header">
+    <div class="carousel-container">
+      <button class="carousel-btn prev">&#10094;</button>
+
+      <div class="carousel">
+  
+           <a href="stray.html">
+        <div class="game-card">
+          <img src="img/stray poster.png" alt="Stray">
+          <h3>Stray (2022)</h3>
+        </div>
+       </a>
+        <div class="game-card">
+          <img src="img/pesadelinhos poster.png" alt="Little Nightmares">
+          <h3>Little Nightmares (2016)</h3>
+        </div>
+
+        <div class="game-card">
+          <img src="img/stanley poster.png" alt="Stanley Parable">
+          <h3>Stanley Parable (2013)</h3>
+        </div>
+
+        <a href="hotline.html">
+        <div class="game-card">
+          <img src="img/hotline poster.png"  alt="Hotline Miami">
+          <h3>Hotline Miami (2012)</h3>
+        </div>
+          </a>
+
+        <div class="game-card">
+          <img src="img/omori poster.png" alt="Omori ">
+          <h3>Omori (2020)</h3>
+        </div>
+
+        <div class="game-card">
+          <img src="img/spookys poster.png" alt="Spooky's Mansion">
+          <h3>Spooky's Mansion (2015) </h3>
+        </div>
+
+        <div class="game-card">
+          <img src="img/buckshot poster.png" alt="Buckshot Roulette">
+          <h3>Buckshot Roulette (2023)</h3>
+        </div>
+
+        <div class="game-card">
+          <img src="img/gris poster.png" alt="Gris">
+          <h3>Gris (2018)</h3>
+        </div>
+
+        <div class="game-card">
+          <img src="img/stardew poster.png" alt="Stardew Valley ">
+          <h3>Stardew Valley (2016)</h3>
+        </div>
+
+        <div class="game-card">
+          <img src="img/funkin poster.png" alt="Friday Night Funkin'">
+          <h3>Friday Night Funkin' (2020)</h3> 
+        </div>
+
+        <div class="game-card">
+          <img src="img/dont starve poster.png" alt="Hollow Knight">
+          <h3>Don't Starve Together (2022)</h3>
+        </div>
+
+        <div class="game-card">
+          <img src="img/holows poster.png" alt="Hollow Knight">
+          <h3>Hollow Knight (2017)</h3>
+        </div>
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </section>
+    
+      <div class="container-secoes">
+        <section class="secao" id="quemsomos">
+        <h2>Quem Somos?</h2>
+        <p> Somos a Ghost Nebula, uma comunidade apaixonada por jogos indie que busca explorar e celebrar os títulos mais inovadores e cativantes do cenário independente. Nosso objetivo é criar um espaço onde jogadores possam descobrir novas experiências, compartilhar suas paixões e conectar-se com outros entusiastas de jogos indie ao redor do mundo.</p>
+                <img src="img/frame3.png" style="width: 200px; display: flex; z-index: 10; margin-bottom: -50px; position: relative; justify-self:end;">
+      </section>
+
+    <section class="secao" id= "contato">
+        <h2> <img src="img/pointer2.png" style="width: 50px; height: auto; margin: -70px 0 -19px -10px;"> FALE  CONOSCO</h2>
+        <p>GHOSTNEBULA@GMAIL.COM</p>
+        <p>+55 11 91234-5678</p>
+      </section>
+      </div>
+   
+    <footer>
+      <img src="img/st.png" style="max-width: 300px; height: auto;" alt="Logo Ghost Nebula">
+      <img src="img/Screenshot_1.png" style="width: 150px; height: auto; z-index: 9; position: relative; margin-bottom: -10px; margin-left: -50px;  margin-top: -1vh;" alt="Logo Ghost Nebula">
+      <hr>
+      <p> Siga-nos nas redes sociais</p> 
+      <a href ="https://facebook.com/" target="_blank"> <img src="img/facebookIcon.png" style=" width: 40px; height: auto; margin: 0 10px 0 10px;"></a>
+      <a href ="https://instagram.com/" target="_blank"> <img src="img/InstagramIcon.png" style=" width: 40px; height: auto; margin: 0 10px 0 10px;"></a>
+      <a href ="https://www.youtube.com/" target="_blank"> <img src="img/YoutubeIcon.png" style=" width: 40px; height: auto; margin: 0 10px 0 10px;" ></a> 
+        <p> Termos de privacidade </p>
+        <div style="margin-top: 20px; text-align: center; background-color: #400; width: 100%;">
+      <p>© 2025 GhostNebula. Todos os direitos reservados.</p>
+        </div>   
+
+    </footer>
+  </body>
+</html>

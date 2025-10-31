@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------------- GERAL ---------------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: radial-gradient(circle at 30% 30%, #0a0a0a, #111 40%, #000 100%);
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  display: flex;
+  background: linear-gradient(to bottom, #1a1a1a, #000);
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgb(255, 0, 0);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a {
+  padding-top: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: #ff0000 !important;
+  text-shadow: 0 0 10px #ff00ff, 0 0 25px #ff0000;
+  cursor: pointer;
+}
+
+.menu {
+  font-size: 2rem;
+  margin-left: 20px;
+  margin-right: 10px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  outline: none;
+}
+
+/* ---------------- IMAGENS ---------------- */
+
+.game-detail-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 40px;
+}
+
+.game-detail-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -20px;
+}
+
+.game-detail-info {
+  margin-left: 40px;
+  max-width: 1000px;
+
+}
+
+.game-detail-poster {
+  width: 100%;
+  margin-top: 120px;
+  justify-self: center;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(to right , #6200ff , #ff0000,  #6200ff) 1;
+}
+
+.game-detail-minimized {
+  width: 12%; margin: -80px auto 10px auto;
+  border: 3px solid #ff0000;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgb(255, 0, 0);
+  transition: 0.3s ease;
+}
+
+.game-detail-minimized:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+
+/* ---------------- TIPOGRAFIA ---------------- */
+p, h3 {
+  color: #e0e0e0;
+  margin-top: -10px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff0000,  #6200ff); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 0, 200, 0.4); 
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff0000,  #6200ff);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  text-shadow: 0 0 8px rgba(255, 0, 200, 0.3); 
+}
+
+/* ---------------- BOTÕES ---------------- */
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.btn-comprar {
+  background: #ff00001f;
+  color: #000;
+  border: 1px solid #ff0000;
+  border-radius: 25px;
+  padding: 0.8em 1.8em;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px gradient  #ff0000;
+  transition: 0.3s;
+}
+
+.btn-comprar:hover {
+  box-shadow: 0 0 25px  #ff0000cc;
+}
+
+.btn-favoritar {
+  background: #ae00ff11;
+  color: #000;
+  border: 1px solid #a200ff;
+  border-radius: 25px;
+  padding: 0.8em 1.8em;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px #a200ff;
+  transition: 0.3s;
+}
+
+.btn-favoritar:hover {
+  box-shadow: 0 0 25px #a200ff;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: #0a0a0a;
+  color: #aaa;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+  width: 100%;
+  box-shadow: 0 -2px 15px rgba(255, 0, 255, 0.1);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  nav ul { gap: 2vw; }
+  .titulo { width: 100px; }
+  .container { padding: 40px; }
+  .bem-vindo { width: 45%; }
+  .navbar {padding: 10px 0 10px 0;}
+  .logo-container img { width: 150px; }
+  .logo-container h1 { font-size: 4rem; }
+  .game-detail-container { flex-direction: column; }
+  .game-detail-poster {width: 100%; margin-top: 120px;}
+  .game-detail-minimized { position: relative; margin: -100px auto 10px auto;width: 100px;}
+}
+
+@media (max-width: 768px) {
+  .logo-container { flex-direction: column; gap: 1rem; }
+  .logo-container img { width: 120px; }
+  .logo-container h1 { font-size: 1.8rem; }
+  nav ul { flex-direction: row; justify-content: center; gap: 5vw; }
+  .search-area {margin: -20px 0 20px 0;}
+  .secao { width: 80%; padding: 15px; margin: 30px;}
+  .game-card { min-width: 200px; }
+  .game-results { width: 200px; margin-right: -160px; margin-left: 30px;}
+  .carousel-btn { font-size: 1.5rem; }
+  .container-secoes { display: flex; flex-direction: column; align-items: center;} /*areas de texto*/
+  .content { display: flex; flex-direction: column; align-items: center;}
+  .header {width: 420px; margin-top: -100px;}
+  .hero-section {position: relative; display: flex; justify-content: center;align-items: center; flex-direction: column;}
+  .menu {display: block;}
+  .nav-links {display: none; transform: translateY(-100%); opacity: 0; pointer-events: none; flex-direction: column; background-color: #000; position: absolute; top: 60px; right: 10px; padding: 10px; border: 1px solid #ff0000; border-radius: 8px; box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);}
+  .nav-links.active {display: flex; transform: translateY(0); opacity: 1; pointer-events: all}
+}
+
+@media (max-width: 480px) {
+  .logo-container { flex-direction: column; gap: 0.6rem; }
+  .titulo { width: 100px; }
+  .logo-container img { width: 50px; }
+  .logo-container h1 { font-size: 1.4rem; }
+  nav a { font-size: 0.9rem; }
+  .logo { max-width: 300px; margin-top: 30px;}
+  .logo2 { width: 200px; margin-left: -85px; margin-bottom: -50px; margin-top: 30px;}
+  .search-results img { left: 0; }
+  .quemsomos { width: 95%; }
+  .container-secoes { display: flex; flex-direction: column; align-items: center;}
+  .header {width: 420px; margin-top: -100px;}
+}

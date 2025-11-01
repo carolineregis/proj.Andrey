@@ -106,3 +106,29 @@ function filterGames() {
   searchResults.classList.remove("hidden");
 }
 
+/* SEÇÃO PRODUTOS */
+/* filtro e busca */
+const search = document.getElementById('search');
+const filter = document.getElementById('filter');
+const product = document.querySelectorAll('.product-card');
+
+/* filtro de busca */
+search.addEventLiestener('input', () => {
+  const value = search.value.toLowerCase();
+  products.forEach(p => {
+  const title = p.querySelector('h3').text.Content.toLowerCase();
+  p.style.display = title.startsWith(value) ? 'block' : 'none';
+  });
+});
+
+/* filtro por categoria */
+filter.addEventListener('change', () => {
+      const type = filter.value;
+      products.forEach(p => {
+        if (type === 'all' || p.dataset.type === type) {
+          p.style.display = 'block';
+        } else {
+          p.style.display = 'none';
+        }
+      });
+    });

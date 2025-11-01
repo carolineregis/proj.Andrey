@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GhostNebula - Início</title>
   <link rel="icon" type="image/png" href="img/icon.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="produtos.css">
   <script src="script.js" defer> </script>
 </head>
   <body>
-    
+
   <header>
-    
       <nav class="navbar">
         <!-- logo -->
         <div class="logo-container2"> 
@@ -24,12 +23,20 @@
           <li><a href="#jogos">Jogos</a></li>
           <li><a href="#quemsomos">Sobre </a></li>
           <li><a href="#contato">Contato</a></li>
+           <li><a href="produtos.html">Produtos</a></li>
          
-          <!-- area de pesquisa -->
-          <div class="content">
+          
+        </ul>
+        <div class="menu" id="menu">&#9776;</div>
+      </nav>
+
+  </header>
+
+  <div class="top-bar"> 
+    <div class="content">
               <div class="search-area">
-                <div class="search-box">
-                  <input type="text" id="search-input" placeholder="Digite o nome do jogo..." oninput="filterGames()">
+                <div class="search-box-products">
+                  <input type="text" id="search-input" placeholder="Digite o nome do produto..." oninput="filterGames()">
                   <button> 
                     <i class="fas fa-search"> <!-- design da lupa   -->
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -39,87 +46,99 @@
                     </i> 
                   </button>
                 </div>
-                <div id="search-results" class="hidden"> </div> <!-- area de resultados preenchida pelo JS -->
+                <div id="search-results-products" class="hidden"> </div> <!-- area de resultados preenchida pelo JS -->
               </div>
           </div>
-        </ul>
-        <div class="menu" id="menu">&#9776;</div>
-      </nav>
-   
-  </header>
+    <select id="categoriaFiltro">
+        <option value="todos">Todos</option>
+        <option value="camiseta">Camisetas</option>
+        <option value="moletom">Moletons</option>
+        <option value="caneca">Canecas</option>
+        <option value="chaveiro">Chaveiros</option>
+        <option value="garrafa">Broches</option>
+        <option value="outros">Outros</option>
+      </select>
+      
+  </div>
 
-  <section id= "jogos" class="carousel-section"> <!-- seção de jogos-->
-    <img src="img/header.png" class="header">
-    <div class="carousel-container">
-      <button class="carousel-btn prev">&#10094;</button>
 
-      <div class="carousel">
+  <div class="display-products">
 
-        <div class="game-card">
-          <img src="img/stray poster.png" alt="Stray">
-          <h3>Stray (2022)</h3>
-        </div>
-
-        <div class="game-card">
-          <img src="img/pesadelinhos poster.png" alt="Little Nightmares">
-          <h3>Little Nightmares (2016)</h3>
-        </div>
-
-        <div class="game-card">
-          <img src="img/stanley poster.png" alt="Stanley Parable">
-          <h3>Stanley Parable (2013)</h3>
-        </div>
-
-        <a href="hotline.html">
-        <div class="game-card">
-          <img src="img/hotline poster.png"  alt="Hotline Miami">
-          <h3>Hotline Miami (2012)</h3>
-        </div>
-          </a>
-
-        <div class="game-card">
-          <img src="img/omori poster.png" alt="Omori ">
-          <h3>Omori (2020)</h3>
-        </div>
-
-        <div class="game-card">
-          <img src="img/spookys poster.png" alt="Spooky's Mansion">
-          <h3>Spooky's Mansion (2015) </h3>
-        </div>
-
-        <div class="game-card">
-          <img src="img/buckshot poster.png" alt="Buckshot Roulette">
-          <h3>Buckshot Roulette (2023)</h3>
-        </div>
-
-        <div class="game-card">
-          <img src="img/gris poster.png" alt="Gris">
-          <h3>Gris (2018)</h3>
-        </div>
-
-        <div class="game-card">
-          <img src="img/stardew poster.png" alt="Stardew Valley ">
-          <h3>Stardew Valley (2016)</h3>
-        </div>
-
-        <div class="game-card">
-          <img src="img/funkin poster.png" alt="Friday Night Funkin'">
-          <h3>Friday Night Funkin' (2020)</h3> 
-        </div>
-
-        <div class="game-card">
-          <img src="img/dont starve poster.png" alt="Hollow Knight">
-          <h3>Don't Starve Together (2022)</h3>
-        </div>
-
-        <div class="game-card">
-          <img src="img/holows poster.png" alt="Hollow Knight">
-          <h3>Hollow Knight (2017)</h3>
-        </div>
-      </div>
-      <button class="carousel-btn next">&#10095;</button>
+    <div class="product-card" data-type="camiseta">
+        <img src="img/Camisa1.jpeg" class="img-card" alt="camisa1">
+        <h3>Camisa "Aiming The Stars"</h3>
+        <p> R$49,90</p>
     </div>
-  </section>
+
+     <div class="product-card" data-type="camiseta2">
+        <img src="img/Camisa2.jpeg" class="img-card" alt="camisa2">
+        <h3>Camisa Ghost Nebula</h3>
+        <p> R$49,90</p>
+    </div>
+
+
+     <div class="product-card" data-type="camiseta3">
+        <img src="img/Camisa3.jpeg" class="img-card" alt="camisa3">
+        <h3>Camisa Ghost stars</h3>
+        <p> R$45,10</p>
+    </div>
+
+    <div class="product-card" data-type="moletom">
+        <img src="img/Moletom.jpeg" class="img-card" alt="moletom">
+        <h3>Moletom manga de brilho</h3>
+        <p> R$89,90</p>
+    </div>
+
+    <div class="product-card" data-type="moletomback">
+        <img src="img/Moletom back.jpeg" class="img-card" alt="moletomback">
+        <h3>Moletom "Aim The Stars"</h3>
+        <p> R$89,90</p>
+    </div>
+
+   <div class="product-card" data-type="caneca">
+        <img src="img/Caneca.jpeg" class="img-card" alt="caneca">
+        <h3>Caneca cerâmica preta Ghost Nebula</h3>
+        <p> R$14,00</p>
+    </div>
+
+    <div class="product-card" data-type="chaveiro">
+        <img src="img/Chaveiro.jpeg" class="img-card" alt="chaveiro">
+        <h3>Chaveiro 50mm </h3>
+        <p> R$12,50</p>
+    </div>
+
+    <div class="product-card" data-type="bottom">
+        <img src="img/Bottom.jpeg" class="img-card" alt="bottom">
+        <h3>Broche de alfinete 44mm </h3>
+        <p> R$9,90</p>
+    </div>
+
+    <div class="product-card" data-type="garrafa1">
+        <img src="img/Garrafa1.jpeg" class="img-card" alt="garrafa1">
+        <h3>Garrafa Revestida 500ml </h3>
+        <p> R$29,90</p>
+    </div>
+
+    <div class="product-card" data-type="garrafa2">
+        <img src="img/Garrafa2.jpeg" class="img-card" alt="garrafa2">
+        <h3>Garrafa Térmica Aço inox 900ml</h3>
+        <p> R$35,40</p>
+    </div>
+
+    <div class="product-card" data-type="Touca">
+        <img src="img/Touca.jpeg" class="img-card" alt="Touca">
+        <h3>Touca de linha</h3>
+        <p> R$25,00</p>
+    </div>
+
+     <div class="product-card" data-type="bone">
+        <img src="img/Boné.jpeg" class="img-card" alt="bone">
+        <h3>Boné Masculino</h3>
+        <p> R$35,40</p>
+    </div>
+
+  </div>
+  
     
     
     <footer>

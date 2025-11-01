@@ -22,45 +22,48 @@ links.forEach(link => {
   });
 });
 
-/* efeito carrossel de posters */
 const carousel = document.querySelector('.carousel');
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
-const scrollAmount = 300; // pixels por clique
+/* Duplicar itens para loop infinito */
+carousel.innerHTML += carousel.innerHTML;
 
-/* Ajustar scroll inicial para o começo do primeiro conjunto */
-carousel.scrollLeft = 0;
+/* Função para checar e resetar scroll */
+function checkScroll() {
+  const scrollWidth = carousel.scrollWidth / 2; // metade original
+  if (carousel.scrollLeft >= scrollWidth) {
+    carousel.scrollLeft -= scrollWidth;
+  } else if (carousel.scrollLeft <= 0) {
+    carousel.scrollLeft += scrollWidth;
+  }
+}
 
-// Avançar 
+/* Avançar */
 nextBtn.addEventListener('click', () => {
+  const scrollAmount = carousel.offsetWidth; // rola a largura visível
   carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  setTimeout(checkScroll, 500); // timeout para esperar o scroll smooth
+  setTimeout(checkScroll, 500);
 });
 
-// Voltar
+/* Voltar */
 prevBtn.addEventListener('click', () => {
+  const scrollAmount = carousel.offsetWidth;
   carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   setTimeout(checkScroll, 500);
 });
 
-// Função que “reseta” o scroll para efeito infinito
-function checkScroll() {
-  const maxScroll = carousel.scrollWidth / 1.5; // metade total
-  if (carousel.scrollLeft >= maxScroll) {
-    // chegamos no final, resetar para o começo do original
-    carousel.scrollLeft = carousel.scrollLeft - maxScroll;
-  } else if (carousel.scrollLeft <= 0) {
-    // chegamos no começo, resetar para o final do original
-    carousel.scrollLeft = carousel.scrollLeft + maxScroll;
-  }
-}
-
-/* SCROLL AUTOMÁTICO */
+/* Scroll automático */
 setInterval(() => {
+  const scrollAmount = carousel.offsetWidth / 2; // metade da largura visível
   carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   setTimeout(checkScroll, 500);
-}, 3000); 
+}, 3000);
+
+/* Resetar scroll ao redimensionar*/
+window.addEventListener('resize', () => {
+  carousel.scrollLeft = 0;
+});
 
 const games = [
   { name: "Stray", img: "img/stray poster.png" },
@@ -109,20 +112,20 @@ function filterGames() {
 /* SEÇÃO PRODUTOS */
 /* filtro e busca */
 const search = document.getElementById('search');
-const filter = document.getElementById('filter');
-const product = document.querySelectorAll('.product-card');
+const filtro = document.getElementById('filtro');
+const products = document.querySelectorAll('.product-card');
 
 /* filtro de busca */
 search.addEventLiestener('input', () => {
   const value = search.value.toLowerCase();
   products.forEach(p => {
-  const title = p.querySelector('h3').text.Content.toLowerCase();
-  p.style.display = title.startsWith(value) ? 'block' : 'none';
+  const title = p.querySelector('h3').textContent.toLowerCase();
+  p.style.display = title.includes(value) ? 'block' : 'none';
   });
 });
 
 /* filtro por categoria */
-filter.addEventListener('change', () => {
+filtro.addEventListener('change', () => {
       const type = filter.value;
       products.forEach(p => {
         if (type === 'all' || p.dataset.type === type) {

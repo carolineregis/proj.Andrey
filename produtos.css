@@ -18,12 +18,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height:80px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color:#000000;
-  flex-wrap: nowrap ;
+  flex-wrap: nowrap;
 }
 
 .nav-links {
@@ -31,9 +31,10 @@ body {
   align-items: center;
   gap: 2rem;
   list-style: none;
-  right: 20px;
+  right: 200px;
   width: 200px;
   height: 500px;
+  padding: 20px;
 }
 
 .nav-links li a {
@@ -160,7 +161,7 @@ footer {
 }
 
 .logo {
-    width: 30ch; 
+    width: 200px; 
     height: auto; 
     margin: auto auto auto 10px;
 }
@@ -170,21 +171,15 @@ footer {
   nav ul { gap: 2vw; }
   .navbar {padding: 10px 0 10px 0;}
   .logo-container img { width: 120px; }
-  .html, body { overflow-x: hidden; }
-   /*.nav-links { z-index: -1; transform: translateY(-100%); opacity: 0; 
-  transition: transform 0.5s ease; pointer-events: none; 
-  flex-direction: row; background-color: #000; 
-  position: absolute; top: 90px; padding: 13px; 
-  border: 1px; gap: 4rem;}
-  .nav-links.active {z-index: 0; display: flex; transform: translateY(0); opacity: 1; pointer-events: all}
-  .nav-links.deactive {z-index: -1; display: flex; transform: translateY(-100%); opacity: 1; pointer-events: none} */
+  html, body { overflow-x: hidden; }
+  .top-bar {width: 100%;}
   }
 
 @media (max-width: 768px) {
   .img-card {width: 200px; height: auto; cursor: pointer; }
   .menu {display: block;}
-  .nav-links { transform: translateX(100%); transition: transform 0.5s ease; opacity: 0; pointer-events: none; flex-direction: column; display: none; 
-  background-color: #000; position: absolute; top: 80px; right: -10px; padding: 10px; }
+  .nav-links { padding-right: 110px; padding-left: 110px; transform: translateX(100%); transition: transform 0.5s ease; opacity: 0; pointer-events: none; flex-direction: column; display: none; 
+  background-color: #000; position: absolute; top: 80px; right: -10px;  width: auto;}
   .nav-links.active {z-index: 100; display: flex; transform: translateX(0); opacity: 1; pointer-events: all}
   .nav-links.deactive {z-index: 100; display: none; transform: translateX(100%); opacity: 1; pointer-events: none}
   }
@@ -193,8 +188,8 @@ footer {
    html, body { overflow-x: hidden; }
   .display-products { margin: 100px auto; gap: 50px;}
   .product-card { margin: 0; flex: 0 1 300px; text-align: center;}
-  .top-bar {width: 200px;}
-  .logo {width: 100px; margin-top: 15px;}
+  .logo {width: 150px;}
   .header {width: 100%; margin-top: -100px;}
-   nav a { font-size: 0.9rem; }
+  nav a { font-size: 0.9rem; }
+  .nav-links { padding-right: 110px; padding-left: 110px;  }
 }
